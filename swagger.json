@@ -1,62 +1,29 @@
 {
     "swagger": "2.0",
     "info": {
-    "version": "1.0.0",
-    "description": "sample api login logout",
-    "title": "NIRAJ SINGH"
+        "version": "1.0.0",
+        "description": "swagger REST API with CRUD",
+        "title": "movies API"
     },
     "host": "localhost:8000",
     "basePath": "/",
     "schemes": [
-    "http"
+        "http"
     ],
     "paths": {
-    "/one/select": {
-    "get": {
-    "description": "Creates a user in the database",
-    
-    "responses": {
-    "200": {
-    "description" : "successfully signed up."
+        
+        "/one/select": {
+            "get": {
+                "summary": "find a movie with movieId",
+                "description": "returns a single movie",
+                "operationId": "getMovieById",
+                "responses": {
+                    "200": {
+                        "description": "Successfully fetched the data"
+                    }
+                }
+            }
+        }
+        
     }
-    }
-    }
-   
-    },
-    "/users/login": {
-    "post": {
-    "description": "Logs in a user",
-    "parameters": [
-    {
-    "type": "string",
-    "description": "Username of user",
-    "name": "username",
-    "in": "formData"
-    },
-    {
-    "type": "password",
-    "description": "Password",
-    "name": "password",
-    "in": "formData"
-    }
-    ],
-    "responses": {
-    "200": {
-    "description" : "successfully logged in."
-    }
-    }
-    },
-    "get": {
-    "description": "Logs in a user",
-    "responses": {
-    "200": {
-    "description": "response template render"
-    }
-    }
-    }
-    
-    }
-    }
-    }
-    
-    
+}

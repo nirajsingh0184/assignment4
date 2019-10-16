@@ -41,21 +41,23 @@ index.create=()=>{
     
     });
     }
-index.insert=()=>{
-    return new Promise((resolve,reject)=>{
-    con.query(`insert into niraj (name) values ('raja') `,(err,rows,fields)=>{
-    if(!err){
-        return resolve(rows);
-    }
-    else{
-         return reject(err.message);
-    
-    }
-    });
-    
-    });
-    }
-    index.update=()=>{
+    index.insert=()=>{
+        return new Promise((resolve,reject)=>{
+    con.query(`INSERT into niraj (name)VALUES("dfsdfs")`,(err,rows,fields)=>{
+        if(!err){
+            console.log();
+            
+            return resolve(rows);
+        }
+        else{
+             return reject(err.message);
+        
+        }
+        });
+        
+        });
+        }
+          index.update=()=>{
         return new Promise((resolve,reject)=>{
         con.query(`UPDATE niraj
         SET name = 'sonu'

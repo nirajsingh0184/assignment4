@@ -23,7 +23,7 @@ router.get('/create',async(req,res,next)=>{
       //res.sendStatus(500);
   }
   });
-router.get('/insert',async(req,res,next)=>{
+  router.get('/insert',async(req,res,next)=>{
     try{
         let results=await db.insert();
         res.send(results);
